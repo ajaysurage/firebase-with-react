@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    npm
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Calculator</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="icon" id="icon" onclick="history()"><i class="historyicon" id="icon">history</i></div>
+        <div class="historyouter" id="history" style="display: none;">
+            <div class="historyinner" id="historyinner"> 
+            </div>
+        </div>
+        <div class="outputbox">
+            <div class="resultbox">
+                <span id="answer">
+                    Ans = 0
+                </span>
+            </div>
+            <div class="inputbox">
+                <span id=calculation> 0
+                </span>
+            </div>
+        </div>
+        <table>
+            
+            <tr>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">Rad</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">Dag</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">x!</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">(</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">)</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" id="clear" onclick="btnclk(this.textContent)">AC</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">Inv</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        
+                        <div class="char operator" onclick="btnclk(this.textContent)">
+                            <span onclick="r('sin')" class="scifunc">sin</span>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">In</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">7</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">8</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number"  onclick="btnclk(this.textContent)">9</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">÷</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">pi</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">cos</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">log</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">4</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">5</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">6</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">×</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn">
+                        <div class="char operator onclick="btnclk(this.textContent)">e</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator onclick="btnclk(this.textContent)">tan</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator onclick="btnclk(this.textContent)">squre</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">1</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">2</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">3</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">-</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">Ans</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">EXP</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">X <sup>y</sup></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">0</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char number" onclick="btnclk(this.textContent)">.</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char equal" onclick="btnclk(this.textContent)">=</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn">
+                        <div class="char operator" onclick="btnclk(this.textContent)">+</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="display" class="display">
+        <table>
+            <tr>
+                <td><button class="btn btn-1">Rad</button></td>
+                <td><button class="btn btn-1">Deg</button></td>
+                <td><button class="btn btn-1">X!</button></td>
+                <td><button class="btn btn-1">(</button></td>
+                <td><button class="btn btn-1">)</button></td>
+                <td><button class="btn btn-1">%</button></td>
+                <td><button class="btn btn-1">CE</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-1">Inv</button></td>
+                <td><button class="btn btn-1">sin</button></td>
+                <td><button class="btn btn-1">In</button></td>
+                <td><button class="btn btn-1">7</button></td>
+                <td><button class="btn btn-1">8</button></td>
+                <td><button class="btn btn-1">9</button></td>
+                <td><button class="btn btn-1">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-1">pi</button></td>
+                <td><button class="btn btn-1">cos</button></td>
+                <td><button class="btn btn-1">log</button></td>
+                <td><button class="btn btn-1">4</button></td>
+                <td><button class="btn btn-1">5</button></td>
+                <td><button class="btn btn-1">6</button></td>
+                <td><button class="btn btn-1">x</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-1">e</button></td>
+                <td><button class="btn btn-1">tan</button></td>
+                <td><button class="btn btn-1">rute</button></td>
+                <td><button class="btn btn-1">1</button></td>
+                <td><button class="btn btn-1">2</button></td>
+                <td><button class="btn btn-1">3</button></td>
+                <td><button class="btn btn-1">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-1">Ans</button></td>
+                <td><button class="btn btn-1">EXP</button></td>
+                <td><button class="btn btn-1">X<sup>Y</sup></button></td>
+                <td><button class="btn btn-1" value="0" onclick="display.value += '0'">0</button></td>
+                <td><button class="btn btn-1" value="." onclick="display.value += '.'">.</button></td>
+                <td><button class="btn btn-1" value="=" onclick="calculate()">=</button></td>
+                <td><button class="btn btn-1">+</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html> -->

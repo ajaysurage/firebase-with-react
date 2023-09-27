@@ -1,0 +1,50 @@
+.section-3{
+    width: 80%;
+    height: 30rem;
+    /* background-color: whitesmoke; */
+    position: relative;
+    top: 8rem;
+    left: 10%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.section-3-A{
+    width: 95%;
+    height: 100%;
+    /* border: 2px solid black; */
+    background-image: url(https://blog.nasm.org/hubfs/food-restriction-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-3-B{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+    background-color: white;
+}
+.sec-3-ul{
+    display: flex;  
+    position: relative;   
+    font-size: 20px;
+}
+.ul-1{
+    list-style-type: circle;
+    position: absolute;
+    left: 2rem;
+    line-height: 2rem; 
+}
+.ul-2{
+    line-height: 2rem; 
+    list-style-type: circle;
+    position: absolute;
+    left: 18rem;     
+}
+#About{
+    color: rgb(7, 168, 7);
+}
+#Better{
+    font-size: 60px;
+}
+.section-3-B>p{
+    color: gray;
+}
